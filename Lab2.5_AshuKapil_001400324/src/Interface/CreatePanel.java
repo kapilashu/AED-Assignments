@@ -125,6 +125,8 @@ public class CreatePanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
+        try
+        {
         double temperature = Double.parseDouble(txtTemperature.getText());
         double bloodPressure = Double.parseDouble(txtBloodPressure.getText());
         int pulse = Integer.parseInt(txtPulse.getText());
@@ -135,7 +137,10 @@ public class CreatePanel extends javax.swing.JPanel {
         v.setPulse(pulse);
         v.setDate(date);
         JOptionPane.showMessageDialog(null,"Vital SIgns Added Successfully");
+        }
         
+        catch (Exception e)
+        {JOptionPane.showMessageDialog(null,"Wrong format");
         txtBloodPressure.setText("");
         txtDate.setText("");
         txtPulse.setText("");
