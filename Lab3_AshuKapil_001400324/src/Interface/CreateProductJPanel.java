@@ -138,7 +138,7 @@ public class CreateProductJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
             
         
-        if(txtProdName.getText().isEmpty())
+        if(txtProdName.getText().isEmpty()||txtAvailablity.getText().isEmpty()||txtDescription.getText().isEmpty()||txtPrice.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Field cannot be empty");
             return;
@@ -152,6 +152,12 @@ public class CreateProductJPanel extends javax.swing.JPanel {
             return;
         }
         
+        try{
+            double price=Double.parseDouble(txtPrice.getText());
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Price must be set to number");
+            return;
+        }
         
         
         Double.parseDouble(txtPrice.getText());
