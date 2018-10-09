@@ -8,6 +8,7 @@ package Interface;
 import Interface.airliner.AirlinerDirectoryJPanel;
 import java.awt.CardLayout;
 import Business.*;
+import Interface.customers.WorkAreaPanel;
 import Interface.manage.LoginJPanel;
 import Interface.manage.WorkAreaJPanel;
 
@@ -23,7 +24,7 @@ public class MainJFrame extends javax.swing.JFrame {
      */
     private  airliner_directory airliner1;
     private airliner a;
-   
+   private CustomerDirectory custdir;
     public MainJFrame() {
         initComponents();
         airliner1=new airliner_directory();
@@ -48,9 +49,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        LeftjPanel.setBackground(new java.awt.Color(204, 0, 0));
+        LeftjPanel.setBackground(new java.awt.Color(153, 153, 153));
 
-        btnagency.setBackground(new java.awt.Color(0, 153, 153));
         btnagency.setText("Travel Agency");
         btnagency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +58,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnairliner.setBackground(new java.awt.Color(0, 153, 153));
         btnairliner.setText("Manage Airliners");
         btnairliner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,35 +65,39 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        btncustomers.setBackground(new java.awt.Color(0, 153, 153));
         btncustomers.setText("Customers");
+        btncustomers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncustomersActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout LeftjPanelLayout = new javax.swing.GroupLayout(LeftjPanel);
         LeftjPanel.setLayout(LeftjPanelLayout);
         LeftjPanelLayout.setHorizontalGroup(
             LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LeftjPanelLayout.createSequentialGroup()
-                .addGroup(LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnairliner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnairliner, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btncustomers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnagency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         LeftjPanelLayout.setVerticalGroup(
             LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LeftjPanelLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addComponent(btnagency)
-                .addGap(43, 43, 43)
-                .addComponent(btnairliner)
-                .addGap(45, 45, 45)
-                .addComponent(btncustomers)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addComponent(btnagency, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72)
+                .addComponent(btnairliner, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(btncustomers, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         SplitPane.setLeftComponent(LeftjPanel);
 
-        RightjPanel.setBackground(new java.awt.Color(102, 102, 102));
+        RightjPanel.setBackground(new java.awt.Color(204, 0, 0));
         RightjPanel.setLayout(new java.awt.CardLayout());
         SplitPane.setRightComponent(RightjPanel);
 
@@ -128,6 +131,15 @@ public class MainJFrame extends javax.swing.JFrame {
          layout.next(RightjPanel);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnairlinerActionPerformed
+
+    private void btncustomersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncustomersActionPerformed
+
+        WorkAreaPanel workareapanel = new WorkAreaPanel(RightjPanel,airliner1 ,custdir);
+        RightjPanel.add("CustomerWorkAreaJPanel",workareapanel);
+        CardLayout layout = (CardLayout)RightjPanel.getLayout();
+        layout.next(RightjPanel);
+// TODO add your handling code here:
+    }//GEN-LAST:event_btncustomersActionPerformed
 
     /**
      * @param args the command line arguments

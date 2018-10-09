@@ -45,23 +45,20 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
         btnback = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(102, 102, 102));
+        setBackground(new java.awt.Color(204, 0, 51));
 
-        lblairlinername.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lblairlinername.setText("ADD AIRLINER ");
+        lblairlinername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblairlinername.setText("ADD AIRLINER NAMES");
 
-        lblairliner.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblairliner.setText("Enter Airliner Name:");
 
-        btnback.setForeground(new java.awt.Color(204, 0, 0));
-        btnback.setText(">>BACK");
+        btnback.setText("<<BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
 
-        btnadd.setForeground(new java.awt.Color(204, 0, 0));
         btnadd.setText("Add Airliner");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,35 +71,31 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(355, 355, 355)
-                        .addComponent(lblairlinername))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnadd)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblairliner)
-                                .addGap(126, 126, 126)
-                                .addComponent(txtairlinername, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(401, Short.MAX_VALUE))
+                    .addComponent(lblairliner)
+                    .addComponent(btnback))
+                .addGap(105, 105, 105)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblairlinername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnadd)
+                    .addComponent(txtairlinername))
+                .addContainerGap(471, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(40, 40, 40)
                 .addComponent(lblairlinername)
-                .addGap(52, 52, 52)
+                .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblairliner)
+                    .addComponent(lblairliner, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtairlinername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addComponent(btnadd)
-                .addGap(18, 18, 18)
-                .addComponent(btnback)
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnback)
+                    .addComponent(btnadd))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -110,7 +103,7 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
         airliner a = airliner1.addairliner();
         a.setAirlinerName(txtairlinername.getText());
         
-        JOptionPane.showMessageDialog(null, "Supplier successfully added", "Warning", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Airliners successfully added", "Added", JOptionPane.INFORMATION_MESSAGE);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnaddActionPerformed
 

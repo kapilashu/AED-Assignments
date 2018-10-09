@@ -59,9 +59,9 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
         btnremove = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(102, 102, 102));
+        setBackground(new java.awt.Color(204, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Manage Airliner");
 
         tblairliner.setModel(new javax.swing.table.DefaultTableModel(
@@ -82,15 +82,13 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblairliner);
 
-        btnback.setForeground(new java.awt.Color(204, 0, 0));
-        btnback.setText(">>BACK");
+        btnback.setText("<<BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
 
-        btnremove.setForeground(new java.awt.Color(204, 0, 0));
         btnremove.setText("REMOVE");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +96,6 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnadd.setForeground(new java.awt.Color(204, 0, 0));
         btnadd.setText("ADD");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,33 +110,33 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(388, 388, 388)
-                        .addComponent(jLabel1))
+                        .addGap(91, 91, 91)
+                        .addComponent(btnback)
+                        .addGap(99, 99, 99)
+                        .addComponent(btnremove)
+                        .addGap(108, 108, 108)
+                        .addComponent(btnadd))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
+                        .addGap(69, 69, 69)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
-                        .addComponent(btnback)
-                        .addGap(62, 62, 62)
-                        .addComponent(btnremove)
-                        .addGap(74, 74, 74)
-                        .addComponent(btnadd)))
-                .addContainerGap(262, Short.MAX_VALUE))
+                        .addGap(245, 245, 245)
+                        .addComponent(jLabel1)))
+                .addContainerGap(387, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(50, 50, 50)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnback)
                     .addComponent(btnremove)
                     .addComponent(btnadd))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
