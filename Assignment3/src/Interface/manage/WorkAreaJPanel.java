@@ -41,7 +41,9 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         managePButton = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Work Area of Airliner");
 
         managePButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -57,23 +59,20 @@ public class WorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(224, 224, 224)
-                        .addComponent(managePButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel1)))
+                .addGap(224, 224, 224)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(managePButton))
                 .addContainerGap(261, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(45, 45, 45)
+                .addGap(58, 58, 58)
                 .addComponent(managePButton)
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

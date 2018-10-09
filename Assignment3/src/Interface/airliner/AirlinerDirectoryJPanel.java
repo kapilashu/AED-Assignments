@@ -39,8 +39,12 @@ public class AirlinerDirectoryJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btndirectory = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("WORK AREA OF AIRLINER");
 
+        btndirectory.setForeground(new java.awt.Color(204, 0, 0));
         btndirectory.setText("Airliner Directory");
         btndirectory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,9 +62,9 @@ public class AirlinerDirectoryJPanel extends javax.swing.JPanel {
                         .addGap(302, 302, 302)
                         .addComponent(btndirectory))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(290, 290, 290)
+                        .addGap(234, 234, 234)
                         .addComponent(jLabel1)))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +73,7 @@ public class AirlinerDirectoryJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(46, 46, 46)
                 .addComponent(btndirectory)
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

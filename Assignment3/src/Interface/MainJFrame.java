@@ -48,6 +48,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        LeftjPanel.setBackground(new java.awt.Color(204, 0, 0));
+
+        btnagency.setBackground(new java.awt.Color(0, 153, 153));
         btnagency.setText("Travel Agency");
         btnagency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +58,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnairliner.setBackground(new java.awt.Color(0, 153, 153));
         btnairliner.setText("Manage Airliners");
         btnairliner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +66,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btncustomers.setBackground(new java.awt.Color(0, 153, 153));
         btncustomers.setText("Customers");
 
         javax.swing.GroupLayout LeftjPanelLayout = new javax.swing.GroupLayout(LeftjPanel);
@@ -69,10 +74,10 @@ public class MainJFrame extends javax.swing.JFrame {
         LeftjPanelLayout.setHorizontalGroup(
             LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LeftjPanelLayout.createSequentialGroup()
-                .addGroup(LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnagency)
-                    .addComponent(btnairliner)
-                    .addComponent(btncustomers))
+                .addGroup(LeftjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnairliner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btncustomers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnagency, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         LeftjPanelLayout.setVerticalGroup(
@@ -89,6 +94,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         SplitPane.setLeftComponent(LeftjPanel);
 
+        RightjPanel.setBackground(new java.awt.Color(102, 102, 102));
         RightjPanel.setLayout(new java.awt.CardLayout());
         SplitPane.setRightComponent(RightjPanel);
 

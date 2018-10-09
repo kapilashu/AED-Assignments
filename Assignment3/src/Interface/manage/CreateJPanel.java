@@ -54,7 +54,10 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtflight = new javax.swing.JTextField();
         txttime = new javax.swing.JTextField();
 
-        jLabel2.setText("CREATE DETAILS");
+        setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setText("CREATE PANEL");
 
         jLabel3.setText("Departure Location");
 
@@ -66,6 +69,7 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         jLabel7.setText("Preferred Time");
 
+        btnback.setBackground(new java.awt.Color(204, 0, 0));
         btnback.setText("<<BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +77,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        btncreate.setBackground(new java.awt.Color(204, 0, 0));
         btncreate.setText("CREATE");
         btncreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +152,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnback)
                     .addComponent(btncreate))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

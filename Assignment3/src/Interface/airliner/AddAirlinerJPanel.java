@@ -45,10 +45,15 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
         btnback = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
 
-        lblairlinername.setText("ADD AIRLINER NAMES");
+        setBackground(new java.awt.Color(102, 102, 102));
 
+        lblairlinername.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblairlinername.setText("ADD AIRLINER ");
+
+        lblairliner.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblairliner.setText("Enter Airliner Name:");
 
+        btnback.setForeground(new java.awt.Color(204, 0, 0));
         btnback.setText(">>BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +61,7 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnadd.setForeground(new java.awt.Color(204, 0, 0));
         btnadd.setText("Add Airliner");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,36 +76,33 @@ public class AddAirlinerJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(409, 409, 409)
+                        .addGap(355, 355, 355)
                         .addComponent(lblairlinername))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnadd)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblairliner)
                                 .addGap(126, 126, 126)
-                                .addComponent(txtairlinername, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnback)
-                                .addGap(304, 304, 304)
-                                .addComponent(btnadd)))
-                        .addGap(9, 9, 9)))
-                .addContainerGap(284, Short.MAX_VALUE))
+                                .addComponent(txtairlinername, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(24, 24, 24)
                 .addComponent(lblairlinername)
-                .addGap(47, 47, 47)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblairliner)
                     .addComponent(txtairlinername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(123, 123, 123)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnback)
-                    .addComponent(btnadd))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addComponent(btnadd)
+                .addGap(18, 18, 18)
+                .addComponent(btnback)
+                .addContainerGap(244, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -59,6 +59,9 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
         btnremove = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Manage Airliner");
 
         tblairliner.setModel(new javax.swing.table.DefaultTableModel(
@@ -79,6 +82,7 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblairliner);
 
+        btnback.setForeground(new java.awt.Color(204, 0, 0));
         btnback.setText(">>BACK");
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +90,7 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnremove.setForeground(new java.awt.Color(204, 0, 0));
         btnremove.setText("REMOVE");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +98,7 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnadd.setForeground(new java.awt.Color(204, 0, 0));
         btnadd.setText("ADD");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +139,7 @@ public class AirlinerManagerJPanel extends javax.swing.JPanel {
                     .addComponent(btnback)
                     .addComponent(btnremove)
                     .addComponent(btnadd))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
