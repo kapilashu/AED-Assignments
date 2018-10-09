@@ -38,6 +38,7 @@ public class ChooseAirplanes extends javax.swing.JPanel {
     private void initComponents() {
 
         btnviewflight = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 0, 0));
 
@@ -48,13 +49,17 @@ public class ChooseAirplanes extends javax.swing.JPanel {
             }
         });
 
+        backBtn.setText("<<Back");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(272, 272, 272)
-                .addComponent(btnviewflight)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnviewflight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(backBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(730, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -62,7 +67,9 @@ public class ChooseAirplanes extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(166, 166, 166)
                 .addComponent(btnviewflight)
-                .addContainerGap(480, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addComponent(backBtn)
+                .addContainerGap(388, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -72,6 +79,7 @@ public class ChooseAirplanes extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBtn;
     private javax.swing.JButton btnviewflight;
     // End of variables declaration//GEN-END:variables
 }
