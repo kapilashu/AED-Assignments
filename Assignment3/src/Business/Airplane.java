@@ -10,42 +10,58 @@ package Business;
  * @author lENOVO PC
  */
 public class Airplane {
-    private String departure_location;
-    private int flight_number;
-    private String arrival_location;
-    private String preferred_time;
+   private static int count = 0;
+    private String AirplaneName;
+    private int price;
+    private String source;
+   private String destination;
     private String date;
+    private String preferred;
+    private String seatType;
+     private int AirlinerCode;
+     
+     private int seetNumber=1;
 
-    public String getDeparture_location() {
-        return departure_location;
+    public int getSeetNumber() {
+        return seetNumber;
     }
 
-    public void setDeparture_location(String departure_location) {
-        this.departure_location = departure_location;
+    public void setSeetNumber(int seetNumber) {
+        this.seetNumber = seetNumber;
     }
 
-    public int getFlight_number() {
-        return flight_number;
+    public int getAirlinerCode() {
+        return AirlinerCode;
     }
 
-    public void setFlight_number(int flight_number) {
-        this.flight_number = flight_number;
+    public void setAirlinerCode(int AirlinerCode) {
+        this.AirlinerCode = AirlinerCode;
     }
 
-    public String getArrival_location() {
-        return arrival_location;
+    
+     
+    public String getSeatType() {
+        return seatType;
     }
 
-    public void setArrival_location(String arrival_location) {
-        this.arrival_location = arrival_location;
+    public void setSeatType(String seatType) {
+        this.seatType = seatType;
     }
 
-    public String getPreferred_time() {
-        return preferred_time;
+    public String getSource() {
+        return source;
     }
 
-    public void setPreferred_time(String preferred_time) {
-        this.preferred_time = preferred_time;
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
     }
 
     public String getDate() {
@@ -56,11 +72,47 @@ public class Airplane {
         this.date = date;
     }
 
-     @Override
-    public String toString()
-    {
-        return departure_location;
+    public String getPreferred() {
+        return preferred;
+    }
+
+    public void setPreferred(String preferred) {
+        this.preferred = preferred;
+    }
+   
+
+    
+    
+    public Airplane(){
+        count++;
+        AirlinerCode=count;
     }
     
+
+    public String getAirplaneName() {
+        return AirplaneName;
+    }
+
+    public void setAirplaneName(String AirplaneName) {
+        this.AirplaneName = AirplaneName;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    
+    public void seetInc(){
+        seetNumber++;
+    }
+
+    
+    @Override
+    public String toString() {
+        return AirplaneName;
+    }
     
 }

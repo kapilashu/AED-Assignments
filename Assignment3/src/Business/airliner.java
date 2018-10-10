@@ -4,15 +4,31 @@
  * and open the template in the editor.
  */
 package Business;
+import Business.Airplane;
+import Business.AirplaneCatalog;
 
 /**
  *
  * @author lENOVO PC
  */
-public class airliner {
+public class Airliner {
     private String airlinerName;
-    private Airplane_directory cd;
+    private AirplaneCatalog airplaneCatalog;
+    
+    
+    public Airliner() {
+        airplaneCatalog = new AirplaneCatalog();
+    }
 
+    public AirplaneCatalog getAirplaneCatalog() {
+        return airplaneCatalog;
+    }
+
+    public void setAirplaneCatalog(AirplaneCatalog airplaneCatalog) {
+        this.airplaneCatalog = airplaneCatalog;
+    }
+    
+    
     public String getAirlinerName() {
         return airlinerName;
     }
@@ -20,25 +36,9 @@ public class airliner {
     public void setAirlinerName(String airlinerName) {
         this.airlinerName = airlinerName;
     }
-
-    public Airplane_directory getCd() {
-        return cd;
-    }
-
-    public void setCd(Airplane_directory cd) {
-        this.cd = cd;
-    }
-    
-    
-    
-    public airliner()
-    {
-        cd = new Airplane_directory();
-    }
-    
     @Override
-    public String toString()
-    {
+    public String toString() {
         return airlinerName;
     }
+   
 }

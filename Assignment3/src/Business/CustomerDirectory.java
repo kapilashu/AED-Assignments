@@ -4,36 +4,33 @@
  * and open the template in the editor.
  */
 package Business;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+import Business.Customer;
 
 /**
  *
  * @author lENOVO PC
  */
 public class CustomerDirectory {
+    private ArrayList<Customer> customerdirectory;
     
-    
-    private ArrayList<Person>custdir;
-
-    public ArrayList<Person> getPlist() {
-        return custdir;
-    }
-
-    public void setPlist(ArrayList<Person> plist) {
-        this.custdir = plist;
-    }
-        
-     
     public CustomerDirectory(){
-   
-        custdir = new ArrayList<Person>();
+        customerdirectory = new ArrayList<>();
     }
     
-    public void addPerson(Person p)
-    {
-        this.custdir.add(p);
-        
+    public ArrayList<Customer> getCustomerDirectory() {
+        return customerdirectory;
     }
     
+    public Customer addCustomer(){
+        Customer customer = new Customer();
+        customerdirectory.add(customer);
+        return customer;
+    }
+    
+    public void deleteCustomer(Customer customer){
+        customerdirectory.remove(customer);
+    
+}
 }
